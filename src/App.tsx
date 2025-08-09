@@ -22,7 +22,7 @@ import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 import Monthlymenu from "./pages/Monthlymenu";
 import Contact from "./pages/Contact";
-import About from "./pages/about";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
