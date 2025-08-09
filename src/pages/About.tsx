@@ -409,63 +409,67 @@ const About = () => {
         </section> */}
 
         {/* Online Ordering Section */}
-     <motion.section
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
-  className="bg-gradient-to-r from-green-700 to-green-600 rounded-3xl p-12 text-white shadow-2xl"
->
-  <div className="grid lg:grid-cols-2 gap-12 items-stretch">
-    {/* Left Side */}
-    <div className="flex flex-col justify-center h-full">
-      <h2 className="text-4xl font-bold mb-6">Experience Pulse at Home</h2>
-      <p className="text-xl mb-8 leading-relaxed">
-        Can't visit us in person? Enjoy our Mediterranean flavors delivered fresh to your door with our convenient online ordering.
-      </p>
-      <div className="grid sm:grid-cols-2 gap-6 mb-8">
-        {[
-          { icon: <Clock className="w-6 h-6 text-yellow-300" />, text: "Fast 30-min delivery" },
-          { icon: <Truck className="w-6 h-6 text-yellow-300" />, text: "Real-time tracking" },
-          { icon: <Shield className="w-6 h-6 text-yellow-300" />, text: "Secure payment" },
-          { icon: <Smartphone className="w-6 h-6 text-yellow-300" />, text: "Easy mobile ordering" }
-        ].map((item, index) => (
-          <div key={index} className="flex items-center space-x-3">
-            {item.icon}
-            <span className="font-medium">{item.text}</span>
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-green-700 to-green-600 rounded-3xl p-12 text-white shadow-2xl"
+        >
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold mb-6">Experience Pulse at Home</h2>
+              <p className="text-xl mb-8 leading-relaxed">
+                Can't visit us in person? Enjoy our Mediterranean flavors delivered fresh to your door with our convenient online ordering.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-6 mb-8">
+                {[
+                  { icon: <Clock className="w-6 h-6 text-yellow-300" />, text: "Fast 30-min delivery" },
+                  { icon: <Truck className="w-6 h-6 text-yellow-300" />, text: "Real-time tracking" },
+                  { icon: <Shield className="w-6 h-6 text-yellow-300" />, text: "Secure payment" },
+                  { icon: <Smartphone className="w-6 h-6 text-yellow-300" />, text: "Easy mobile ordering" }
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    {item.icon}
+                    <span className="font-medium">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <Button className="bg-white text-green-700 hover:bg-gray-100 px-8 py-4 text-lg rounded-full shadow-lg">
+                  Start Ordering
+                </Button>
+                <Button variant="outline" className="border-white text-green-700 hover:bg-white/10 px-8 py-4 text-lg rounded-full">
+                  View Menu
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <motion.div
+                animate={{
+                  y: [0, -10, 0]
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute -top-8 -left-8 z-10"
+              >
+                {/* <img 
+                  src="https://cdn-icons-png.flaticon.com/512/5619/5619319.png" 
+                  alt="Delivery scooter" 
+                  className="w-24 h-24"
+                /> */}
+              </motion.div>
+              <img 
+                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                alt="Online ordering app" 
+                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto border-8 border-white/20"
+              />
+            </div>
           </div>
-        ))}
-      </div>
-      <div className="flex flex-wrap gap-4 mt-auto">
-        <Button className="bg-white text-green-700 hover:bg-gray-100 px-8 py-4 text-lg rounded-full shadow-lg">
-          Start Ordering
-        </Button>
-        <Button variant="outline" className="border-white text-green-700 hover:bg-white/10 px-8 py-4 text-lg rounded-full">
-          View Menu
-        </Button>
-      </div>
-    </div>
-
-    {/* Right Side */}
-    <div className="relative flex items-center justify-center">
-      <motion.div
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-8 -left-8 z-10"
-      ></motion.div>
-
-      <video
-        src="/img/all img/vedio/vedio.mp4"
-        className="rounded-2xl shadow-2xl w-full max-w-md mx-auto border-8 border-white/20 h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-    </div>
-  </div>
-</motion.section>
-
+        </motion.section>
 
         {/* Visit Us Section */}
         {/* <section className="grid md:grid-cols-2 gap-8">
