@@ -13,10 +13,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
              <Link to="/" className="flex-shrink-0 flex items-center">
-              <img src='img/all img/logo/P whitelog.png' className="text-2xl font-bold h-36  "></img>
+              <img src='img/all img/logo/P whitelog.png' className="text-2xl font-bold h-36 w-auto"></img>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md lg:mt-[-40px]">
-              {t('footer.description')}
+              {/* {t('footer.description')} */}
+              Fresh, healthy, and delivered straight <br/>to your doorstep
             </p>
             <div className="flex space-x-4">
               <Facebook className="h-6 w-6 text-gray-400 hover:text-green-400 cursor-pointer transition-colors" />

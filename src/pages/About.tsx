@@ -176,23 +176,20 @@ const About = () => {
             className="space-y-6"
           >
             <div className="inline-block bg-orange-100 text-orange-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
-              Our Heritage
+              About us
             </div>
-            <h2 className="text-4xl font-bold text-gray-900">From Humble Beginnings</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Choose Wholesome Meals,<span className="text-green-600">Every Day</span> </h2>
             <div className="space-y-4 text-lg leading-relaxed text-gray-700">
               <p>
-                Pulse began as a dream shared around our family table in a small coastal village in Greece. 
-                Three generations of recipes, passed down through weathered hands and whispered secrets, 
-                found their way to our hearts—and now to yours.
+         
+         <span style={{ color: '#159545', fontWeight: 700 }}>Pulse Healthy </span>
+                 is a premium healthy restaurant dedicated to creating delicious, nutrient-rich meals that support your wellness goals. With flexible weekly and monthly subscription plans, we make healthy eating simple, convenient, and accessible for everyone, from busy professionals to fitness enthusiasts and health-conscious families.
               </p>
               <p>
-                When we opened our doors in 2010, we brought more than just recipes. We brought the warmth of 
-                summer evenings spent on terraces overlooking the Mediterranean, the laughter that echoes 
-                through olive groves, and the simple joy of sharing a meal with people you love.
+               Our menu offers a variety for every part of the day: continental breakfasts to kickstart your mornings, hearty yet balanced lunches, light and energizing snacks, and wholesome dinners. From burgers and pasta to salads, sandwiches, and a flavorful range of fish dishes, every item is prepared with a healthy twist using fresh, high-quality ingredients.
               </p>
               <p>
-                Every dish we serve carries this heritage—the pulse of our homeland, beating strong 
-                in every carefully crafted bite.
+               At  <span style={{ color: '#159545', fontWeight: 700 }}>Pulse Healthy </span>, every meal is thoughtfully crafted to nourish your body and excite your taste buds. Whether you’re maintaining a balanced diet or beginning a healthier lifestyle,  <span style={{ color: '#159545', fontWeight: 700 }}>Pulse Healthy </span> is your trusted partner in wellness.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 pt-4">
@@ -214,17 +211,17 @@ const About = () => {
             <Card className="p-0 bg-white shadow-xl overflow-hidden">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  src="img/all img/about/1.jpg" 
                   alt="Our chef team" 
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                  <blockquote className="text-xl italic leading-relaxed text-white">
+                  {/* <blockquote className="text-xl italic leading-relaxed text-white">
                     "Food is the thread that weaves families together, and every meal is a story waiting to be shared."
-                  </blockquote>
-                  <cite className="block mt-4 text-orange-300 font-medium">
+                  </blockquote> */}
+                  {/* <cite className="block mt-4 text-orange-300 font-medium">
                     — Maria Konstantinos, Founder
-                  </cite>
+                  </cite> */}
                 </div>
               </div>
             </Card>
@@ -239,14 +236,14 @@ const About = () => {
           viewport={{ once: true }}
           className="bg-gradient-to-r from-green-700 to-green-600 text-white rounded-3xl p-12 shadow-2xl"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center font-['poppins']">
             {[
               { value: stats.customers.toLocaleString(), label: "Satisfied Customers", suffix: "+" },
               { value: stats.dishes, label: "Signature Dishes", suffix: "" },
               { value: stats.awards, label: "Culinary Awards", suffix: "" }
             ].map((stat, index) => (
               <div key={index} className="p-6">
-                <div className="text-6xl font-bold mb-2 font-serif">
+                <div className="text-6xl font-bold mb-2 font-['poppins']">
                   {stat.value}
                   <span className="text-orange-300">{stat.suffix}</span>
                 </div>
@@ -266,7 +263,7 @@ const About = () => {
             className="order-1 md:order-2"
           >
             <img 
-              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" 
+              src="img/all img/about/2.jpg" 
               alt="Fresh ingredients" 
               className="w-full h-auto rounded-3xl shadow-2xl transform hover:scale-[1.01] transition-transform duration-300"
             />
@@ -282,7 +279,7 @@ const About = () => {
             <div className="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
               Our Promise
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Culinary Philosophy</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Recipe for Your Wellness</h2>
             <div className="grid sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
                 <motion.div 
@@ -418,11 +415,11 @@ const About = () => {
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">Experience Pulse at Home</h2>
+              <h2 className="text-3xl font-bold mb-6">Enjoy Pulse, Anytime, Anywhere</h2>
               <p className="text-xl mb-8 leading-relaxed">
-                Can't visit us in person? Enjoy our Mediterranean flavors delivered fresh to your door with our convenient online ordering.
+   Enjoy fresh and healthy meals without leaving home, fast delivery & full of flavor.
               </p>
-              <div className="grid sm:grid-cols-2 gap-6 mb-8">
+              {/* <div className="grid sm:grid-cols-2 gap-6 mb-8">
                 {[
                   { icon: <Clock className="w-6 h-6 text-yellow-300" />, text: "Fast 30-min delivery" },
                   { icon: <Truck className="w-6 h-6 text-yellow-300" />, text: "Real-time tracking" },
@@ -434,7 +431,7 @@ const About = () => {
                     <span className="font-medium">{item.text}</span>
                   </div>
                 ))}
-              </div>
+              </div> */}
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-white text-green-700 hover:bg-gray-100 px-8 py-4 text-lg rounded-full shadow-lg">
                   Start Ordering
@@ -463,9 +460,9 @@ const About = () => {
                 /> */}
               </motion.div>
               <img 
-                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                src="img/all img/about/3.jpg" 
                 alt="Online ordering app" 
-                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto border-8 border-white/20"
+                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto border-2 border-white"
               />
             </div>
           </div>

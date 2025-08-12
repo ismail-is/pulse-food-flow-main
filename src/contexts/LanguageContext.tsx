@@ -28,7 +28,7 @@ const translations = {
     'features.flexible.desc': 'Choose from various meal plans that fit your lifestyle',
     'testimonials.title': 'What Our Customers Say',
     'faq.title': 'Frequently Asked Questions',
-    'footer.description': 'Delivering fresh, healthy meals to fuel your lifestyle.',
+    'footer.description': 'Fresh, healthy, and delivered straight to your doorstep',
     'footer.links': 'Quick Links',
     'footer.contact': 'Contact Us',
     'footer.follow': 'Follow Us'

@@ -323,6 +323,316 @@ const Menu = () => {
 
 
     // salads
+
+
+    // pudding
+     {
+      id: 37,
+      name: 'Chia Seeds',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+           image: '/img/menu/21.webp',
+     category: 'pudding'
+    },
+     {
+      id: 38,
+      name: 'Vanilla Chia Pudding',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+           image: '/img/menu/21.webp',
+     category: 'pudding'
+    },
+     {
+      id: 39,
+      name: 'Chia Pudding with Peanut Butter and Jelly',
+      description: 'Chia Pudding with Peanut Butter and Jelly',
+      price: '13',
+           image: '/img/menu/21.webp',
+     category: 'pudding'
+    },
+     {
+      id: 40,
+      name: 'Chocolate Chia Pudding',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+           image: '/img/menu/21.webp',
+     category: 'pudding'
+    },
+     {
+      id: 41,
+      name: 'Blueberry',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+           image: '/img/menu/21.webp',
+     category: 'pudding'
+    },
+     {
+      id: 42,
+      name: 'Strawberries and Cream',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+           image: '/img/menu/21.webp',
+     category: 'pudding'
+    },
+     {
+      id: 43,
+      name: 'Chia Pudding with Split Banana',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+           image: '/img/menu/21.webp',
+     category: 'pudding'
+    },
+    // pudding
+
+
+    // juice
+
+      {
+      id: 44,
+      name: 'Pineapple & Peach',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+      image: '/img/menu/21.webp',
+      category: 'juice'
+      },
+      {
+      id: 45,
+      name: 'Apple & Pineapple',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+      image: '/img/menu/21.webp',
+      category: 'juice'
+      },
+      {
+      id: 46,
+      name: 'Kiwi & Mango',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+      image: '/img/menu/21.webp',
+      category: 'juice'
+      },
+      {
+      id: 47,
+      name: 'Orange',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+      image: '/img/menu/21.webp',
+      category: 'juice'
+      },
+      {
+      id: 49,
+      name: 'Ginger',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+      image: '/img/menu/21.webp',
+      category: 'juice'
+      },
+      {
+      id: 50,
+      name: ' Pineapple',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+      image: '/img/menu/21.webp',
+      category: 'juice'
+      },
+      {
+      id: 51,
+      name: 'Beetroot and Apple',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+      image: '/img/menu/21.webp',
+      category: 'juice'
+      },
+      {
+      id: 52,
+      name: 'Carrot, Orange, and Ginger',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+      image: '/img/menu/21.webp',
+      category: 'juice'
+      },
+      {
+      id: 53,
+      name: 'Orange with Cranberry',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '13',
+      image: '/img/menu/21.webp',
+      category: 'juice'
+      },
+    // juice
+
+
+    // beef
+     {
+      id: 54,
+      name: 'Sirloin Steak ',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'beef'
+      },
+     {
+      id: 55,
+      name: 'Sweet & Spicy Beef ',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'beef'
+      },
+     {
+      id: 56,
+      name: 'Beef Piccata ',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'beef'
+      },
+     {
+      id: 57,
+      name: 'Beef Stroganoff ',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'beef'
+      },
+     {
+      id: 58,
+      name: 'Beef Fajitas',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'beef'
+      },
+    // beef
+
+
+    // rice
+
+      {
+      id: 59,
+      name: 'White Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 60,
+      name: 'Brown Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 61,
+      name: 'Steamed Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 62,
+      name: 'Chinese Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 63,
+      name: 'Cinnamon Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 64,
+      name: 'Curry Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 65,
+      name: 'Saffron Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 66,
+      name: 'Vermicelli Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 67,
+      name: 'Egyptian Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 68,
+      name: 'Beetroot Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 69,
+      name: 'Mixed Vegetable Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+      {
+      id: 70,
+      name: 'Egg Rice',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'rice'
+      },
+     
+    // rice
+
+    // pasta
+     {
+      id: 70,
+      name: 'Mixed Sauce Pasta',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'pasta'
+      },
+     {
+      id: 72,
+      name: 'Pasta and Pesto',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'pasta'
+      },
+     {
+      id: 73,
+      name: 'Pasta with Tomato Saucе',
+      description: 'Crispy bread topped with gooey garlic cheese.',
+      price: '38',
+      image: '/img/menu/21.webp',
+      category: 'pasta'
+      },
+    // pasta
   ];
 
   const categories = [
@@ -331,7 +641,16 @@ const Menu = () => {
     { id: 'lunch', name: 'Lunch', icon: UtensilsCrossed },
     { id: 'dinner', name: 'Dinner', icon: UtensilsCrossed },
     { id: 'snack', name: 'Snacks', icon: UtensilsCrossed },
-    { id: 'salads', name: 'Salads', icon: UtensilsCrossed }
+    { id: 'salads', name: 'Salads', icon: UtensilsCrossed },
+
+
+    { id: 'burger', name: 'Beef Burger', icon: UtensilsCrossed },
+    { id: 'pizza', name: 'Pizza', icon: UtensilsCrossed },
+    { id: 'pasta', name: 'Pasta', icon: UtensilsCrossed },
+    { id: 'rice', name: 'Rice', icon: UtensilsCrossed },
+    { id: 'beef', name: 'Beef Dishes', icon: UtensilsCrossed },
+    { id: 'juice', name: 'Juice', icon: UtensilsCrossed },
+    { id: 'pudding', name: 'Pudding', icon: UtensilsCrossed }
   ];
 
   const filteredItems = selectedCategory === 'all' 

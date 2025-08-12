@@ -20,23 +20,23 @@ const Index = () => {
 const features = [
   {
     icon: <FaUtensils size={28} />,
-    title: 'Chef-Crafted, Nutrition-Backed',
-    description: 'Delicious meals designed by chefs and approved by experts.',
+    title: 'Carefully Prepared for Wellness',
+    description: 'Fresh meals to keep you healthy and energized',
   },
   {
     icon: <FaHeartbeat size={28} />,
-    title: 'Tailored for Your Lifestyle',
-    description: 'Meal plans that match your goals and routine.',
+    title: 'Customized for Your Wellness',
+    description: 'Plans to fit your lifestyle and nutrition needs',
   },
   {
     icon: <FaAppleAlt size={28} />,
-    title: 'Freshness You Can Taste',
-    description: 'Prepared daily using real, high-quality ingredients.',
+    title: 'Wholesome freshness to support your wellness goals',
+    description: 'Fresh, quality meals to fuel your health',
   },
   {
     icon: <FaClock size={28} />,
-    title: 'Convenience Without Compromise',
-    description: 'Healthy food delivered on time, every time.',
+    title: 'Healthy Eating is Simplified for Your Wellness',
+    description: 'Balanced meals delivered for healthy living',
   },
 ];
 
@@ -251,16 +251,16 @@ const [src, setSrc] = useState(
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Order Fresh & Healthy Meals
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
+          Eat Well, <span className="text-green-600">Live Well</span>
+        </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-lg">
-                Choose from our delicious menu and get your favorite dishes delivered fresh to your door
+                Pick your meal and we’ll bring it to you, fresh and ready
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg">
                   <ShoppingCart className="mr-2 h-5 w-5" />
-                  Start Ordering
+                 Start Ordering
                 </Button>
                 <Link to="/menu">
                   <Button size="lg" variant="outline" className="px-8 py-4 text-lg border-green-600 text-green-600 hover:bg-green-50">
@@ -309,50 +309,73 @@ const [src, setSrc] = useState(
   `}
 </style>
 
-<div className="relative overflow-hidden bg-white py-6">
+<div className="relative overflow-hidden bg-gradient-to-r from-green-50 via-orange-50 to-green-50 py-10">
+  {/* Floating background icons */}
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <span className="absolute text-5xl opacity-20 animate-float top-10 left-10">🍊</span>
+    <span className="absolute text-6xl opacity-10 animate-float-slow top-40 right-20">🥦</span>
+    <span className="absolute text-4xl opacity-20 animate-float bottom-20 left-1/3">🥕</span>
+  </div>
+
+  {/* Marquee Container */}
   <div
     className="flex whitespace-nowrap animate-marquee"
-    style={{
-      animation: "marqueeLoop 15s linear infinite",
-    }}
+    style={{ animation: "marqueeLoop 18s linear infinite" }}
   >
-    <div className="flex items-center gap-12 text-3xl font-bold px-4">
-      {/* 1st Item */}
-      <div className="flex items-center gap-3">
-        <span className="text-orange-400">★</span>
-        <span className="text-green-900">NUTRITIOUS</span>
+    {[
+      { icon: "🌿", text: "Healthy", color: "text-green-900" },
+      { icon: "🍽️", text: "Appetizing", color: "text-orange-500" },
+      { icon: "🌱", text: "Natural", color: "text-green-700" },
+    ].map((item, idx) => (
+      <div
+        key={idx}
+        className="flex items-center gap-3 mx-8 px-6 py-3 rounded-full shadow-lg bg-white/40 backdrop-blur-md hover:scale-110 transition-transform"
+      >
+        {/* <span className="text-4xl animate-glow">{item.icon}</span> */}
+        <span className={`${item.color} uppercase font-extrabold text-3xl tracking-wider drop-shadow-lg`}>
+          {item.text}
+        </span>
       </div>
+    ))}
 
-      {/* 2nd Item */}
-      <div className="flex items-center gap-3">
-        <span className="text-green-700">★</span>
-        <span className="text-orange-400">DELICIOUS</span>
+    {/* Repeat for seamless scroll */}
+    {[
+      { icon: "🌿", text: "Healthy", color: "text-green-900" },
+      { icon: "🍽️", text: "Appetizing", color: "text-orange-500" },
+      { icon: "🌱", text: "Natural", color: "text-green-700" },
+    ].map((item, idx) => (
+      <div
+        key={idx + 10}
+        className="flex items-center gap-3 mx-8 px-6 py-3 rounded-full shadow-lg bg-white/40 backdrop-blur-md hover:scale-110 transition-transform"
+      >
+        {/* <span className="text-4xl animate-glow">{item.icon}</span> */}
+        <span className={`${item.color} uppercase font-extrabold text-3xl tracking-wider drop-shadow-lg`}>
+          {item.text}
+        </span>
       </div>
-
-      {/* 3rd Item */}
-      <div className="flex items-center gap-3 text-green-700 px-4 py-1 rounded">
-        <span className="text-orange-400">★</span>
-        <span>FRESHNESS</span>
-      </div>
-
-      {/* Repeat items for smooth looping */}
-      <div className="flex items-center gap-3">
-        <span className="text-orange-400">★</span>
-        <span className="text-green-900">NUTRITIOUS</span>
-      </div>
-
-      <div className="flex items-center gap-3">
-        <span className="text-green-700">★</span>
-        <span className="text-orange-400">DELICIOUS</span>
-      </div>
-
-      <div className="flex items-center gap-3  text-green-700 px-4 py-1 rounded">
-        <span className="text-orange-400">★</span>
-        <span>FRESHNESS</span>
-      </div>
-    </div>
+    ))}
   </div>
+
+  <style jsx>{`
+    @keyframes marqueeLoop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 5px gold); }
+      50% { filter: drop-shadow(0 0 15px orange); }
+    }
+    .animate-glow { animation: glow 2s infinite; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(5deg); }
+    }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    .animate-float-slow { animation: float 10s ease-in-out infinite; }
+  `}</style>
 </div>
+
 
 
 
@@ -391,6 +414,81 @@ const [src, setSrc] = useState(
     </div>
 
 
+
+
+
+{/* or brand */}
+<section className="py-20 relative overflow-hidden   bg-gradient-to-br from-green-800 via-green-600 to-green-500 mt-[-40px]" >
+  {/* Decorative elements */}
+  <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
+    {/* Glowing circles */}
+    <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-green-400 blur-3xl"></div>
+    <div className="absolute bottom-10 right-20 w-40 h-40 rounded-full bg-green-700 blur-3xl"></div>
+    {/* Extra gradient overlay */}
+    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-black/10"></div>
+  </div>
+
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    {/* Heading */}
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        Pulse offers <span className="text-yellow-300">you with</span>
+      </h2>
+      {/* <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+        Discover what makes us the perfect choice for your healthy lifestyle
+      </p> */}
+    </div>
+
+    {/* Image Grid */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 grid-rows-6 gap-4">
+      <div className="col-span-2 row-span-3">
+        <img src="/img/all img/brand/1.jpeg" alt="Feature 1"
+          className="w-full h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-300" />
+      </div>
+
+      <div className="row-span-2 col-start-3">
+        <img src="/img/all img/brand/2.jpeg" alt="Feature 2"
+          className="w-full h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-300" />
+      </div>
+
+      <div className="row-span-2 col-start-4">
+        <img src="/img/all img/brand/6.jpeg" alt="Feature 3"
+          className="w-full h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-300" />
+      </div>
+
+      <div className="row-span-2 col-start-5">
+        <img src="/img/all img/brand/9.jpeg" alt="Feature 4"
+          className="w-full h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-300" />
+      </div>
+
+      <div className="row-span-2 col-start-2 row-start-4">
+        <img src="/img/all img/brand/4.jpeg" alt="Feature 5"
+          className="w-full h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-300" />
+      </div>
+
+      <div className="row-span-2 col-start-1 row-start-4">
+        <img src="/img/all img/brand/3.jpeg" alt="Feature 6"
+          className="w-full h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-300" />
+      </div>
+
+      <div className="col-span-2 row-span-3 col-start-3 row-start-3">
+        <img src="/img/all img/brand/8.jpeg" alt="Feature 7"
+          className="w-full h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-300" />
+      </div>
+
+      <div className="row-span-3 col-start-5 row-start-3">
+        <img src="/img/all img/brand/7.jpeg" alt="Feature 8"
+          className="w-full h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-300" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{/* or brand */}
+
+
+
     {/* count */}
 <section
   className="relative py-24 px-4 lg:px-16 z-10"
@@ -426,7 +524,7 @@ const [src, setSrc] = useState(
       {/* Left */}
       <div>
         <h2 className="text-4xl md:text-5xl font-extrabold leading-snug text-black mb-6 tracking-tight">
-          Why Choose{' '}
+          Our {' '}
           <span
             style={{
               background: 'linear-gradient(90deg, #159545 60%, #000 90%)',
@@ -434,20 +532,16 @@ const [src, setSrc] = useState(
               WebkitTextFillColor: 'transparent'
             }}
           >
-            Pulse?
+           Promise
           </span>
         </h2>
         <p className="text-lg text-black mb-4 leading-relaxed font-medium">
-          At Pulse, we believe eating healthy should be{' '}
-          <span style={{ color: '#159545', fontWeight: 800 }}>simple</span>,
-          <span className="font-semibold" style={{ color: '#159545' }}>satisfying</span>,
-          and <span className="font-semibold" style={{ color: '#159545' }}>sustainable</span>.
-          Our meals are crafted by expert chefs, blending nutritional science with delicious flavor for real life.
+        At   <span style={{ color: '#159545', fontWeight: 800 }}>PulseHealthy</span> , we make eating well simple and enjoyable. Our meals are freshly prepared every day with high-quality ingredients, giving you the perfect balance of taste and nutrition. Whether it’s breakfast, lunch, or dinner, we bring wholesome options straight to your table, helping you stay on track with your health goals without sacrificing flavor.
         </p>
-        <p className="text-lg text-black mb-8 leading-relaxed">
+        {/* <p className="text-lg text-black mb-8 leading-relaxed">
           Whether you're chasing fitness goals or want a daily boost—Pulse delivers{' '}
           <span style={{ color: '#159545', fontWeight: 700 }}>fresh, wholesome meals</span> with vibrant taste every time.
-        </p>
+        </p> */}
         <button
           className="px-10 py-3 rounded-full shadow-lg font-semibold text-base tracking-wide transition-all duration-300 hover:scale-105 focus:outline-none"
           style={{
@@ -616,7 +710,7 @@ const [src, setSrc] = useState(
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div className="text-center mb-16">
       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Why Choose <span className="text-white">Pulse Food ?</span>
+       Pulse offers <span className="text-white"> you with</span>
       </h2>
       <p className="text-xl text-gray-100 max-w-2xl mx-auto">
         Discover what makes us the perfect choice for your healthy lifestyle
@@ -630,12 +724,12 @@ const [src, setSrc] = useState(
           <div className="bg-[#1EAD53] bg-opacity-10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 transition-all">
             <Leaf className="h-10 w-10 text-[#1EAD53]" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Fresh Ingredients</h3>
-          <p className="text-gray-600">All ingredients sourced locally and prepared fresh daily</p>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Wholesome Freshness</h3>
+          <p className="text-gray-600">Locally sourced ingredients prepared daily to support your wellness journey</p>
           <div className="mt-6">
-            <span className="inline-block px-4 py-2 bg-[#1EAD53] bg-opacity-10 text-[#1EAD53] rounded-full text-sm font-medium group-hover:bg-opacity-20 transition-colors">
+            {/* <span className="inline-block px-4 py-2 bg-[#1EAD53] bg-opacity-10 text-[#1EAD53] rounded-full text-sm font-medium group-hover:bg-opacity-20 transition-colors">
               Learn more →
-            </span>
+            </span> */}
           </div>
         </CardContent>
       </Card>
@@ -646,12 +740,12 @@ const [src, setSrc] = useState(
           <div className="bg-[#159545] bg-opacity-10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 transition-all">
             <Heart className="h-10 w-10 text-[#159545]" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Nutritious & Balanced</h3>
-          <p className="text-gray-600">Carefully crafted meals with perfect nutritional balance</p>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Customized for Your Wellness</h3>
+          <p className="text-gray-600">Meals designed with the right nutrients to match your health and lifestyle goals.</p>
           <div className="mt-6">
-            <span className="inline-block px-4 py-2 bg-[#159545] bg-opacity-10 text-[#159545] rounded-full text-sm font-medium group-hover:bg-opacity-20 transition-colors">
+            {/* <span className="inline-block px-4 py-2 bg-[#159545] bg-opacity-10 text-[#159545] rounded-full text-sm font-medium group-hover:bg-opacity-20 transition-colors">
               Learn more →
-            </span>
+            </span> */}
           </div>
         </CardContent>
       </Card>
@@ -662,12 +756,12 @@ const [src, setSrc] = useState(
           <div className="bg-[#1EAD53] bg-opacity-10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 transition-all">
             <Clock className="h-10 w-10 text-[#1EAD53]" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Fast Delivery</h3>
-          <p className="text-gray-600">Quick and reliable delivery to your doorstep</p>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Healthy Eating, Simplified for Your Wellness</h3>
+          <p className="text-gray-600">Convenient, timely delivery so you can enjoy nourishing food without the hassle</p>
           <div className="mt-6">
-            <span className="inline-block px-4 py-2 bg-[#1EAD53] bg-opacity-10 text-[#1EAD53] rounded-full text-sm font-medium group-hover:bg-opacity-20 transition-colors">
+            {/* <span className="inline-block px-4 py-2 bg-[#1EAD53] bg-opacity-10 text-[#1EAD53] rounded-full text-sm font-medium group-hover:bg-opacity-20 transition-colors">
               Learn more →
-            </span>
+            </span> */}
           </div>
         </CardContent>
       </Card>
@@ -791,17 +885,17 @@ const [src, setSrc] = useState(
   <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
     {/* Top creative badge */}
     <div className="inline-block bg-white text-green-700 px-4 py-2 rounded-full font-semibold mb-6 shadow-lg animate-fade-in">
-      🥗 Daily Nutrition Made Delightful!
+    Nutritious & flavorful meals for a healthier, happier you
     </div>
 
     {/* Main heading */}
     <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight tracking-tight drop-shadow-lg animate-fade-in-up">
-      Ready to Order Your Favorite Meal?
+    Order now and enjoy wholesome goodness at home
     </h2>
 
     {/* Subheading */}
     <p className="text-xl md:text-2xl text-green-100 mb-10 max-w-3xl mx-auto animate-fade-in-up delay-100">
-      Trusted by thousands, <span className="font-semibold text-white">Pulse Food</span> fuels your day with wholesome and tasty meals.
+      Backed by a Community of Happy Customers
     </p>
 
     {/* Buttons */}
